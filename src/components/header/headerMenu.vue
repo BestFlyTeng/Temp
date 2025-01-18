@@ -9,17 +9,8 @@ const handleSelect = (key, keyPath) => {
 
 <template>
   <div class="menu">
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      :router="true"
-      :ellipsis="false"
-      background-color="transparent"
-      text-color="#fff"
-      active-text-color="#fff"
-    >
+    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true"
+      :ellipsis="false" background-color="transparent" text-color="#fff" active-text-color="#fff">
       <el-menu-item index="/">网站首页</el-menu-item>
       <span>|</span>
       <el-menu-item index="/">公司简介</el-menu-item>
@@ -34,20 +25,22 @@ const handleSelect = (key, keyPath) => {
 </template>
 
 <style scoped lang="less">
-.menu{
-  height:inherit;
+.menu {
+  height: inherit;
   color: white;
-  span{
+
+  span {
     display: flex;
     align-items: center;
   }
 }
-::v-deep {
-  .el-menu--horizontal.el-menu {
+
+::v-deep(.el-menu--horizontal) {
+  &.el-menu {
     border-bottom: none;
-    height:inherit;
+    height: inherit;
   }
-  .el-menu--horizontal>.el-menu-item.is-active{
+  &>.el-menu-item.is-active {
     border-bottom: none;
   }
 }

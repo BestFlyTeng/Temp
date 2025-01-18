@@ -44,11 +44,13 @@ import HeaderMenu from '@/components/header/headerMenu.vue'
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .logo{
+
+      .logo {
         height: 100%;
         display: flex;
         align-items: center;
-        img{
+
+        img {
           height: 80%;
         }
       }
@@ -73,15 +75,13 @@ import HeaderMenu from '@/components/header/headerMenu.vue'
   }
 }
 
-::v-deep {
-  .el-carousel__arrow {
-    background: none;
-    font-size: 3rem;
-    top: 60%;
+::v-deep(.el-carousel__arrow) {
+  background: none;
+  font-size: 3rem;
+  top: 60%;
 
-    &:hover {
-      background-color: transparent;
-    }
+  &:hover {
+    background-color: transparent;
   }
 
   .el-carousel__arrow--left {
