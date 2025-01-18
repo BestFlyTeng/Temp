@@ -37,9 +37,10 @@ const handleSelect = (key, keyPath) => {
 
 ::v-deep(.el-menu--horizontal) {
   &.el-menu {
-    border-bottom: none;
     height: inherit;
   }
+
+  &.el-menu,
   &>.el-menu-item.is-active {
     border-bottom: none;
   }
